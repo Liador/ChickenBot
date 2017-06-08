@@ -2788,7 +2788,10 @@ var commandList = [new commandC(
 				function(user, userID, channelID, message, rawEvent){
 
 					var mToSend = "Votre identifiant est : "+userID;
-					if (bot.serverFromChannel(channelID) != undefined) {
+
+          botSendMessageBis(userID,mToSend);
+
+					/*if (bot.serverFromChannel(channelID) != undefined) {
 						mToSend+= "\nce message s'auto-détruira dans 5 secondes (Pour voir ce message plus longtemps envoyez un message privé à <@"+bot.id+">)"
 					}
 					// TODO pending
@@ -2809,7 +2812,7 @@ var commandList = [new commandC(
 								})
 							},5000,res.id,channelID)
 						}
-					});
+					});*/
 
 					/*bot.sendMessage({
 					    to: channelID,
